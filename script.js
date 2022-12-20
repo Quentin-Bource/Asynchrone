@@ -35,6 +35,7 @@ function cit () {
 	});
 
   document.getElementById('click').addEventListener('click', cit)
+  
   document.getElementById('citation').firstChild.remove()
 
 
