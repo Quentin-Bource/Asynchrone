@@ -24,10 +24,6 @@ async function cit () {
         newPhoto.style.backgroundSize = ("cover")
         newDiv.appendChild(newPhoto)
         
-       
-
-
-        
 
 	})
 	.catch((error) => {
