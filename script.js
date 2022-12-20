@@ -1,4 +1,4 @@
-function cit () {
+async function cit () {
     
     const fetchQuote = () => fetch("https://thatsthespir.it/api");
 
@@ -8,7 +8,7 @@ function cit () {
         //createquota
         let newDiv = document.createElement('div')
         newDiv.classList.add("quota")
-        newDiv.appendChild(document.createTextNode('"'+ json.quote +'"   ' + json.author))
+        newDiv.appendChild(document.createTextNode('"'+ json.quote +'"   ' + json.author ))
         document.getElementById('citation').appendChild(newDiv) 
 
       //createimage
@@ -35,7 +35,7 @@ function cit () {
 	});
 
   document.getElementById('click').addEventListener('click', cit)
-  
+  //Retirer la citation précédente
   document.getElementById('citation').firstChild.remove()
 
 
