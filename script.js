@@ -15,10 +15,12 @@ function cit () {
         let newPhoto = document.createElement('div')
         newPhoto.classList.add("picture")
         if (json.photo){
-        newPhoto.style.background = ("url(" + json.photo + ") center no-repeat")}
+        newPhoto.style.background = ("url(" + json.photo + ") center no-repeat")
+      }
         else 
         {
-        newPhoto.style.background = ("url(/no_picture.png) center no-repeat")}
+        newPhoto.style.background = ("url(/no_picture.png) center no-repeat")
+      }
         newPhoto.style.backgroundSize = ("cover")
         newDiv.appendChild(newPhoto)
         
