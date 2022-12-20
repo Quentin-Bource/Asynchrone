@@ -1,10 +1,12 @@
 async function cit () {
     
-    const fetchQuote = () => fetch("https://thatsthespir.it/api");
+    let response = await fetch("https://thatsthespir.it/api", {
+      method: 'GET'
+    });
+    let json = await response.json()
 
-  fetchQuote()
-	.then((response) => response.json())
-	.then((json) => {
+
+   
         //createquota
         let newDiv = document.createElement('div')
         newDiv.classList.add("quota")
@@ -24,19 +26,11 @@ async function cit () {
         newPhoto.style.backgroundSize = ("cover")
         newDiv.appendChild(newPhoto)
         
-       
-
-
-        
-
-	})
-	.catch((error) => {
-		console.log("There was an error!", error);
-	});
 
   document.getElementById('click').addEventListener('click', cit)
   //Retirer la citation précédente
-  document.getElementById('citation').firstChild.remove()
+  if
+  //document.getElementById('citation').firstChild.remove()
 
 
 }
