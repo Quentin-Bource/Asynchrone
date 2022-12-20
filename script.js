@@ -3,14 +3,21 @@ async function cit () {
     let response = await fetch("https://thatsthespir.it/api", {
       method: 'GET'
     });
-    let json = await response.json()
+    let json = await response.json();
 
+    let age = await fetch("https://api.agify.io/?name=" +  json.author.split(' ')[0], {
+      method: 'GET'
+    });
+
+    
+    age = await age.json();
+    console.log(json.author.split(' ')[0])
 
    
         //createquota
         let newDiv = document.createElement('div')
         newDiv.classList.add("quota")
-        newDiv.appendChild(document.createTextNode('"'+ json.quote +'"   ' + json.author ))
+        newDiv.appendChild(document.createTextNode('"'+ json.quote +'"   ' + json.author + "(" + age.age + ')' ))
         document.getElementById('citation').appendChild(newDiv) 
 
       //createimage
@@ -29,7 +36,7 @@ async function cit () {
 
   document.getElementById('click').addEventListener('click', cit)
   //Retirer la citation précédente
-  if
+
   //document.getElementById('citation').firstChild.remove()
 
 
